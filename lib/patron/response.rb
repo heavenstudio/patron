@@ -30,7 +30,7 @@ module Patron
 
     def initialize(url, status, redirect_count, header_data, body, default_charset = nil)
       # Don't let a response clear out the default charset, which would cause encoding to fail
-      default_charset = "ASCII-8BIT" unless default_charset
+      default_charset = "UTF-8" unless default_charset
       @url            = url
       @status         = status
       @redirect_count = redirect_count
